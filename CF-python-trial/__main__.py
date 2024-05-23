@@ -30,7 +30,7 @@ def main(params):
      title = "Please select "
      with driver.session() as session:
           if agency:
-               details = get_versions(session, agency)
+            #   details = get_versions(session, agency)
                title += "a version"
                
      return {
