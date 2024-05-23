@@ -3,7 +3,7 @@ from neo4j import GraphDatabase
 def get_versions(session, agency):
     query = "MATCH (a:Agency {agencyID: $agency})-->(v:Version) RETURN v LIMIT 10"
     result = session.run(query, agency=agency)
-    details = []
+    details1 = []
     for record in result:
         # print(record)
         details.append(record['v']._properties["version"])
@@ -15,8 +15,8 @@ def get_versions(session, agency):
         #     }
         #   }
         # })
-    print(details)
-    return details
+    print(details1)
+    return details1
 
 
 def main(params):
