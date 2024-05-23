@@ -1,23 +1,5 @@
 from neo4j import GraphDatabase
 
-def get_versions(session, agency):
-    query = "MATCH (a:Agency {agencyID: $agency})-->(v:Version) RETURN v LIMIT 10"
-    result = session.run(query, agency=agency)
-    details1 = []
-    for record in result:
-        # print(record)
-        details1.append(record['v']._properties["version"])
-        # details.append({
-        #   "label": record['v']._properties["version"],
-        #   "value": {
-        #     "input": {
-        #       "text": record['v']._properties["version"]
-        #     }
-        #   }
-        # })
-    print(details1)
-    return details1
-
 
 def main(params):
 
@@ -28,10 +10,10 @@ def main(params):
      details = []
      agency = "X"
      title = "Please select "
-     with driver.session() as session:
-          if agency:
+   #  with driver.session() as session:
+    #      if agency:
             #   details = get_versions(session, agency)
-               title += "a version"
+               #title += "a version"
                
      return {
           # specify headers for the HTTP response
