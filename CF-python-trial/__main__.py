@@ -6,7 +6,7 @@ def get_versions(session, agency):
     details1 = []
     for record in result:
         # print(record)
-        details.append(record['v']._properties["version"])
+        details1.append(record['v']._properties["version"])
         # details.append({
         #   "label": record['v']._properties["version"],
         #   "value": {
@@ -43,5 +43,5 @@ def main(params):
           
           ## use the text generator to create a response sentence
           #  with 10 words
-          "body": details
+          "body": "details"
       }
